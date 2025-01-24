@@ -40,21 +40,22 @@ The BreakHis - Breast Cancer Histopathological Dataset is a critical resource fo
 -  Classification Type: Multi-class classification, focusing on 8 distinct tumor types.
 -  Magnification Levels: Images are available at varying levels of zoom: 40X, 100X, 200X, and 400X.
 
-/dataset/
-    ├── magnification_level/
-    │      ├── 40X/
-    │      ├── 100X/
-    │      ├── 200X/
-    │      ├── 400X/
-    ├── class_name/
-           ├── adenosis/
-           ├── ductal_carcinoma/
-           ├── fibroadenoma/
-           ├── lobular_carcinoma/
-           ├── mucinous_carcinoma/
-           ├── papillary_carcinoma/
-           ├── phyllodes_tumor/
-           ├── tubular_adenoma/
+/dataset/  
+├── magnification_level/  
+│   ├── 40X/  
+│   ├── 100X/  
+│   ├── 200X/  
+│   ├── 400X/  
+├── class_name/  
+│   ├── adenosis/  
+│   ├── ductal_carcinoma/  
+│   ├── fibroadenoma/  
+│   ├── lobular_carcinoma/  
+│   ├── mucinous_carcinoma/  
+│   ├── papillary_carcinoma/  
+│   ├── phyllodes_tumor/  
+│   ├── tubular_adenoma/  
+
 
 **Imbalance Handling**
 - Class imbalance in the dataset is addressed using a combination of oversampling and undersampling techniques 
@@ -112,7 +113,7 @@ The inclusion of robust preprocessing steps, such as contrast enhancement, norma
 This work emphasizes the importance of attention mechanisms in medical imaging and lays a strong foundation for future research. By further exploring techniques such as fine-tuning specific domain data, experimenting with different architectures, and using transfer learning, the performance of such models can be further improved. Ultimately, the methods presented in this project are a valuable tool for advancing breast cancer diagnosis and facilitating early detection, which is crucial for improving patient outcomes.
 Also, visit my Kaggle account for access to all the code, including data visualizations, confusion matrices, and ROC plots, as well as model output.
 
-![My Kaggle](https://www.kaggle.com/code/manofnoego/multi-class-breast-cancer-classification-with-cbam)
+My Kaggle: https://www.kaggle.com/code/manofnoego/multi-class-breast-cancer-classification-with-cbam
 
 ## Reference
 
