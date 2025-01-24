@@ -63,13 +63,13 @@ The BreakHis - Breast Cancer Histopathological Dataset is a critical resource fo
 ![Plot Imbalance dataset](Images/Screenshot%202025-01-24%20170208.png)
 
 **Image Preprocessing**
--  Images are preprocessed to enhance quality and standardize input for deep learning models:
+ Images are preprocessed to enhance quality and standardize input for deep learning models:
 
-- - Contrast Enhancement: The CLAHE (Contrast Limited Adaptive Histogram Equalization) technique is applied to improve image contrast, particularly useful for histopathological images.
-- - Normalization: Images are normalized to the [0, 1] range for better compatibility with deep learning models.
-- - Resizing: All images are resized to a fixed target size (e.g., 224x224 pixels) for consistency.
-- - Data Augmentation: Random horizontal and vertical flips are applied during training to increase model generalization and robustness.
-- - These steps ensure the dataset is well-prepared for training robust and high-performance classification models.
+ - Contrast Enhancement: The CLAHE (Contrast Limited Adaptive Histogram Equalization) technique is applied to improve image contrast, particularly useful for histopathological images.
+ - Normalization: Images are normalized to the [0, 1] range for better compatibility with deep learning models.
+ - Resizing: All images are resized to a fixed target size (e.g., 224x224 pixels) for consistency.
+ - Data Augmentation: Random horizontal and vertical flips are applied during training to increase model generalization and robustness.
+ - These steps ensure the dataset is well-prepared for training robust and high-performance classification models.
 
 ![Histogram](Images/Screenshot%202025-01-24%20155757.png)
 
@@ -80,17 +80,17 @@ The BreakHis - Breast Cancer Histopathological Dataset is a critical resource fo
 The model is built on top of InceptionResNetV2, leveraging pre-trained weights for feature extraction while incorporating the CBAM layer for attention-based refinement.
 
 - CBAM Layer
-- - The Convolutional Block Attention Module (CBAM) is integrated into the model to enhance feature refinement by focusing on critical spatial and channel-wise information.
+   The Convolutional Block Attention Module (CBAM) is integrated into the model to enhance feature refinement by focusing on critical spatial and channel-wise information.
 
-- - Channel Attention Module:
-- - - Computes attention weights along the channel dimension using global average pooling and global max pooling.
-- - - These pooled features are processed by shared dense layers and combined to generate channel-wise attention weights.
-- - Spatial Attention Module:
-- - - Focuses on spatial relationships by combining average and max pooling along the channel axis.
-- - - A convolutional layer applies attention across the spatial dimensions.
-- - Feature Refinement:
-- - - The input features are refined by element-wise multiplication with the channel and spatial attention maps, enabling the model to focus on important regions and suppress irrelevant features.
-- - - This dual attention mechanism improves the model's ability to capture complex patterns in histopathological images, leading to better classification performance.
+   Channel Attention Module:
+   - Computes attention weights along the channel dimension using global average pooling and global max pooling.
+   - These pooled features are processed by shared dense layers and combined to generate channel-wise attention weights.
+   Spatial Attention Module:
+   - Focuses on spatial relationships by combining average and max pooling along the channel axis.
+   - A convolutional layer applies attention across the spatial dimensions.
+  Feature Refinement:
+   - The input features are refined by element-wise multiplication with the channel and spatial attention maps, enabling the model to focus on important regions and suppress irrelevant features.
+   -  This dual attention mechanism improves the model's ability to capture complex patterns in histopathological images, leading to better classification performance.
 
 ## Results 
 The proposed model, incorporating the CBAM and the InceptionResNetV2 backbone, achieved a 94% accuracy on the validation dataset. The model demonstrates a strong ability to learn and generalize from the dataset, as reflected in the training and validation metrics.
