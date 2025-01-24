@@ -7,27 +7,43 @@ Breast cancer is a complex and progressive disease that develops in the breast t
 
 
 **Benign breast tumors**
+
 Benign breast tumors are non-cancerous tumors that can develop in breast tissue. The following are distinct histological types of benign breast tumors:
 
 **Adenose**
+
 Adenosis is characterized by an increase in the number of glandular structures in the breast tissue. It can sometimes mimic cancer but is generally considered benign.
+
 **fibroadenoma**
+
 Fibroadenomas are the most common benign breast tumors, especially in young women. They are composed of both glandular and stromal (connective) tissue, which are well defined as masses on imaging studies.
+
 **Phylloid tumor**
+
 Phyllode tumors, also known as phyllodes cystosarcomas, are rare fibroepithelial tumors that can be benign or malignant. They usually grow quickly and can be large at the time of diagnosis. Histologically, they show a leaf-like architecture.
+
 **Tubular adenoma**
+
 Tubular adenomas are rare benign tumors composed primarily of tubular structures. They may be confused with fibroadenomas, but have distinct histological features, including elongated ducts and minimal stromal component.
 
 **Malignant breast tumors**
+
 Malignant breast tumors are cancerous tumors that can invade surrounding tissues and metastasize to other parts of the body. The following are distinct histological types of malignant breast tumors:
 
 **ductal carcinoma**
+
 Ductal carcinoma is the most common type of breast cancer that originates from the milk ducts. It can be further classified into invasive and non-invasive forms (ductal carcinoma in situ). Invasive ductal carcinoma (IDC) tends to spread beyond the ducts into surrounding breast tissue.
+
 **Lobular carcinoma**
+
 Lobular carcinoma arises from the lobules (milk-producing glands) of the breast. Similar to ductal carcinoma, it can be invasive or non-invasive. Invasive lobular carcinoma often appears as a subtle thickening rather than a distinct mass.
+
 **Mucinous carcinoma**
+
 Mucinous carcinoma is a rare subtype characterized by the presence of mucin-producing cancer cells. This cancer has a better prognosis than other types of invasive breast cancer due to its slower growth rate.
+
 **Papillary carcinoma**
+
 Papillary carcinoma is another rare form of breast cancer that usually appears as a well-defined mass with a papillary structure under microscopic examination. It can be invasive or non-invasive and is often associated with better results compared to more invasive types.
 
 ## Project Overview
@@ -77,17 +93,21 @@ The BreakHis - Breast Cancer Histopathological Dataset is a critical resource fo
 
 
 **Model Architecture with CBAM**
+
 The model is built on top of InceptionResNetV2, leveraging pre-trained weights for feature extraction while incorporating the CBAM layer for attention-based refinement.
 
 - CBAM Layer
+  
    The Convolutional Block Attention Module (CBAM) is integrated into the model to enhance feature refinement by focusing on critical spatial and channel-wise information.
 
    Channel Attention Module:
    - Computes attention weights along the channel dimension using global average pooling and global max pooling.
    - These pooled features are processed by shared dense layers and combined to generate channel-wise attention weights.
+ 
    Spatial Attention Module:
    - Focuses on spatial relationships by combining average and max pooling along the channel axis.
    - A convolutional layer applies attention across the spatial dimensions.
+ 
   Feature Refinement:
    - The input features are refined by element-wise multiplication with the channel and spatial attention maps, enabling the model to focus on important regions and suppress irrelevant features.
    -  This dual attention mechanism improves the model's ability to capture complex patterns in histopathological images, leading to better classification performance.
@@ -95,9 +115,7 @@ The model is built on top of InceptionResNetV2, leveraging pre-trained weights f
 ## Results 
 The proposed model, incorporating the CBAM and the InceptionResNetV2 backbone, achieved a 94% accuracy on the validation dataset. The model demonstrates a strong ability to learn and generalize from the dataset, as reflected in the training and validation metrics.
 
-Training Performance
 The performance of the model during training and validation is visualized in the figure below, which includes:
-
 Accuracy Plot: Shows the progression of training and validation accuracy across 50 epochs. The training accuracy steadily increases and converges near 1.0, while the validation accuracy reaches approximately 0.94, indicating good generalization without severe overfitting.
 Loss Plot: Depicts the reduction in training loss over time and the validation loss fluctuation. The validation loss initially decreases but stabilizes around a consistent value after early epochs.
 The close alignment of training and validation curves demonstrates that the implemented techniques, including dataset balancing, augmentation, and CBAM, contributed effectively to minimizing overfitting and improving the model's robustness.
