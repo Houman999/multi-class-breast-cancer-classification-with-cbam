@@ -112,7 +112,7 @@ The model is built on top of InceptionResNetV2, leveraging pre-trained weights f
    - The input features are refined by element-wise multiplication with the channel and spatial attention maps, enabling the model to focus on important regions and suppress irrelevant features.
    -  This dual attention mechanism improves the model's ability to capture complex patterns in histopathological images, leading to better classification performance.
 
-## Results 
+## Result 
 The proposed model, incorporating the CBAM and the InceptionResNetV2 backbone, achieved a 94% accuracy on the validation dataset. The model demonstrates a strong ability to learn and generalize from the dataset, as reflected in the training and validation metrics.
 
 The performance of the model during training and validation is visualized in the figure below, which includes:
