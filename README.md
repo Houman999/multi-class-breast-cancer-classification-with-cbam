@@ -37,8 +37,8 @@ The BreakHis - Breast Cancer Histopathological Dataset is a critical resource fo
 **Dataset Structure**
 - The dataset is organized into:
 
-- - Classification Type: Multi-class classification, focusing on 8 distinct tumor types.
-- - Magnification Levels: Images are available at varying levels of zoom: 40X, 100X, 200X, and 400X.
+-  Classification Type: Multi-class classification, focusing on 8 distinct tumor types.
+-  Magnification Levels: Images are available at varying levels of zoom: 40X, 100X, 200X, and 400X.
 
 /dataset/
     ├── magnification_level/
