@@ -1,0 +1,2 @@
+# multi-class breast cancer classification with cbam
+ The Breast cancer Classification in multi-calss classification by the 8 classes is the one of hardest classification task on the computer vision field , so this project lay on using the newest approach that is leverging of combining attention mechanism and inception-resnetv2 in transferlearning way by aid of histogram image preprocessing can get Reasonable result for this important problem.
